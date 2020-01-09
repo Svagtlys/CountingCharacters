@@ -44,6 +44,7 @@ public class CountingCharacters {
 //        Scanner input = new Scanner(System.in);
 //        System.out.println("Enter the text you would like to see all alphabetic character counts for:");
 //        givenString = input.nextLine();
+//        input.close();
 
         // SEARCH FILE INPUTTED STRING
         try {
@@ -51,6 +52,7 @@ public class CountingCharacters {
             Scanner input = new Scanner(readIn);
             input.useDelimiter("\\Z");
             givenString = input.next();
+            input.close();
         }catch(FileNotFoundException e){
             System.out.println("Sorry, that file was not found. Ending program...");
             return;
